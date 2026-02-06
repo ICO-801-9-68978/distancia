@@ -1,0 +1,29 @@
+{% import "macros.html" as macros %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Práctica: Distancia entre 2 puntos</title>
+</head>
+<body>
+    <h1>Cálculo de Distancia</h1>
+    
+    <form method="POST">
+        <h3>Punto 1</h3>
+        {{ macros.input_coordenada("X1", "x1", "Ej: -4") }}
+        {{ macros.input_coordenada("Y1", "y1", "Ej: -3") }}
+
+        <h3>Punto 2</h3>
+        {{ macros.input_coordenada("X2", "x2", "Ej: 2") }}
+        {{ macros.input_coordenada("Y2", "y2", "Ej: 5") }}
+
+        <br>
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if distancia is not none %}
+        <h2>Resultado:</h2>
+        <p>La distancia es: <strong>{{ distancia }}</strong></p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,6 @@
+{% macro input_coordenada(label, name, placeholder) %}
+<div class="form-group">
+    <label>{{ label }}</label>
+    <input type="number" step="any" name="{{ name }}" class="form-control" placeholder="{{ placeholder }}" required>
+</div>
+{% endmacro %}
